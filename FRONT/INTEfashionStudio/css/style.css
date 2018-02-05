@@ -1,0 +1,311 @@
+/* Import du CDN FontAwesome */
+@import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
+
+/* Import du CDN de GoogleFont */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,700');
+
+/* 
+Reset
+*/
+    *{
+        /* Supprimer toutes les marges des balises */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les boders et les padding dasn la taille des blocs */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Configurer l'utilisation de 1rem = 10px */
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem; /* => 15px */
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+
+    h1, h2, h3, nav > a, #productPrice{
+        font-family: 'Roboto Slab', serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    /* 
+    Ajouter un pseudo élément ::after à la balise H2 
+    Fonctionne également avec ::before
+    */
+    h2::after {
+        content: ''; /* Obligatoire */
+        display: block; /* Obligatoire */
+
+        width: 10rem;
+        height: .2rem;
+        background-color: #e46c62;
+        margin: 1rem 0 1.5rem 0;
+    } 
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img{
+        /* Faire en sorte que les images ne dépassent jamais la taille de leur parent */
+        max-width: 100%;
+    }
+
+    button{
+        border: none;
+        background-color: transparent;
+    }
+
+    .callToAction{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: .5rem solid #e46c62;
+        padding: .5rem;
+    }
+
+    .margeBloc{
+        padding: 4rem;
+    }
+/**/
+
+/* 
+Style header
+*/
+    header{
+        padding: 4rem;
+        height: 100vh; /* Caler la hauteur du header sur la hauteur de la vue (page) */
+
+        background-image: url('../img/headerBck.jpg');
+        background-size: cover; /* L'image est calée sur la hauteur ou la largeur du bloc */
+    }
+
+    nav{
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+
+        /* Changer ma position pour bloquer les enfants */
+        position: relative;
+    }
+
+    #burgerBtn {
+        background-color: #eff0f1;
+        padding: .5rem .7rem;
+
+        /* 
+            Placer la balise en haut à droite du parent en position relative 
+            Si le parent n'est pas en position relative, la balise en position absolute se place à par rapport au body
+        */
+        position: absolute;
+        z-index: 1; /* Gestion des couches */
+        top: -.7rem;
+        right: 0;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        padding: 4rem;
+
+        display: none; /* Masquer la balise UL de la NAV pour l'afficher en JS */
+    }
+
+    h1{
+        font-size: 4rem;
+        color: #e46c62;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-top: 20rem;
+    }
+
+    h1 span{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: .5em; /* => 50% de la taille définie sur le parent (direct ou non) */
+        text-transform: none;
+        color: black;
+        display: block;
+        margin: 2rem auto;
+    }
+/**/
+
+/* 
+Style main
+*/
+    figure{
+        position: relative; /* Changer ma position pour bloquer les enfants */
+    }
+
+    figcaption{
+        width: 50%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        opacity: 0;
+
+        position: absolute; /* Placer la balise selon le parent en position relative  */
+        top: 50%;
+        left: 50%;
+
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    figure:hover figcaption{
+        opacity: 1;
+    }
+
+    /* Section produit */
+    #productPrice {
+        font-size: 5rem;
+        margin: 1rem 0;
+    }
+
+    #sizeChoice{
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    #sizeChoice ul {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    #sizeChoice li{
+        width: 20%;
+    }
+
+    #sizeChoice button {
+        padding: 1rem;
+        border: .1rem solid #eee;
+    }
+
+    #validatedSize{
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+
+        padding: 1rem 2rem;
+        background-color: #e46c62;
+    }
+/**/
+
+
+/* 
+Requête media
+*/
+
+    /* Ecrans d'une taille minimale de 900px */
+    @media screen and (min-width: 900px){
+
+        /* Rédéfinition le header */
+        #burgerBtn {
+            top: -100rem;
+            display: none;
+        }
+
+        #mainNav {
+            display: inline;
+            position: initial;
+            background-color: transparent;
+            color: black;
+            padding: 0;
+        }
+
+        #mainNav li{
+            display: inline-block;
+            margin-left: 1rem;
+        }
+
+        header {
+            max-width: 100rem;
+            margin: auto;
+            max-height: 55rem;
+            background-color: #eeeff2;
+
+            background-size: auto 130%;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-position-x: 140%;
+            
+        }
+
+        header section{
+            max-width: 65rem;
+            margin: auto;
+        }
+
+        h1 {
+            margin-top: 11rem;
+            font-size: 6rem;
+            max-width: 60%;
+        }
+
+        /* Redéfinition du main */
+        main{
+            max-width: 100rem;
+            margin: auto;
+        }
+
+        #trenchSection, #trenchSection article > div{
+            display: -ms-flex;
+            display: -webkit-flex;
+            display: flex;
+
+            -moz-align-items: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        #trenchSection article{
+            width: 50%;
+        }
+
+        #trenchSection article:last-child{
+            padding-left: 0;
+        }
+
+        #trenchSection article > div{
+            -moz-align-items: flex-end;
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+        }
+
+        #productPrice {
+            font-size: 5rem;
+            margin: 3rem 0 1rem 0;
+            padding-right: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
+/**/

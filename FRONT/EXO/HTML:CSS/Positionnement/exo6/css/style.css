@@ -1,0 +1,66 @@
+/* 
+Reset
+*/
+*{
+    /* Supprimer toutes les marges */
+    margin: 0;
+    padding: 0;
+
+    /* Intéger le padding et la bordure dans la taille des balises */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Configurer les REM */
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body{
+    font-size: 1.5rem; /* => 15px */
+}
+/**/
+
+li{
+    margin-bottom: 3rem;
+}
+
+a{
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 3rem;
+    background-color: red;
+    color: white;
+
+    /* 
+    -webkit-transition: font 1s, background 2s, padding .5s, color 3s;
+    transition: font 1s, background 2s, padding .5s, color 3s; 
+    */
+
+    -webkit-transition: all .5s;
+    transition: all .5s;
+
+    display: inline-block;
+}
+
+a:hover{
+    background-color: green;
+    font-size: 5rem;
+    color: yellow;
+    padding: 5rem;
+
+    
+}
+
+p{
+    border-left: 0 solid red;
+
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+p:hover{
+    padding-left: 2rem;
+    border-width: .5rem;
+}

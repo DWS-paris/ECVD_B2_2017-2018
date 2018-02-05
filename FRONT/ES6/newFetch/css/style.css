@@ -1,0 +1,70 @@
+/* 
+- Intégrer le principe du Reset
+- La largeur max du site est de 800px
+- Les articles sont affichés sur 3 colonnes
+*/
+
+
+/*
+Style reset
+*/ 
+    *{
+        margin: 0;
+        padding: 0;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body{
+        font-size: 1.5rem; /* => 15px */
+    }
+/**/
+
+/*
+Style général
+*/
+    h1, main{
+        max-width: 80rem;
+        margin: auto;
+    }
+
+    main{
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
+        align-items: flex-start;
+
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    main section{
+        width: 33.333%;
+        padding: 2rem;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        background-color: darkblue;
+        padding: 1rem;
+        display: block;
+        margin-top: 1rem;
+
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    a:hover{
+        background-color: grey;
+    }
+/**/

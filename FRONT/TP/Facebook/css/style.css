@@ -1,0 +1,277 @@
+/* 
+Reset
+*/
+    *{
+        /* Intégrer le padding et le border-width dans la taille des blocs */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        /* Supprimer toutes les marges */
+        padding: 0;
+        margin: 0;
+    }
+
+    html{
+        /* Descendre le ratio de 16px à 10px */
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem; /* => 15px */
+        font-family: 'Helvetica', sans-serif;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h1 span {
+        font-size: 1.7rem;
+        font-weight: 100;
+
+        /* Changer le type de balise pour passer le span à la ligne sans <br> */
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 2.65rem;
+        width: 75%;
+        margin-bottom: 2rem;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+    fieldset{
+        border: none;
+    }
+
+    ul{
+        list-style: none;
+    }
+/**/
+
+/* 
+Style formulaire
+*/
+    main input:not( [type="radio"] ) {
+        border: none;
+        border: .1rem solid #bdc7d8;
+        padding: 1rem;
+        font-size: 1.7rem;
+
+        /* Bords arrondis */
+        -webkit-border-radius: .3rem;
+        -moz-border-radius: .3rem;
+        border-radius: .3rem;
+
+        width: 49%;
+        margin-bottom: .5rem;
+    }
+
+    main input:nth-child(3), main input:last-child{
+        width: 99%;
+    }
+
+    main input[type="radio"]{
+        width: auto;
+    }
+
+    legend {
+        font-size: 2rem;
+        padding: 2rem 0 1rem 0;
+    }
+
+    select {
+        height: 3rem;
+        margin-right: .5rem;
+        width: 90%;
+    }
+
+    form li{
+        width: 16%;
+    }
+
+    form li:last-child{
+        width: 52%;
+        font-size: 1.2rem;
+    }
+/**/
+
+
+/* 
+Header
+*/
+    /* Sélectionner une balise grâce à son attribut + valeur */
+   [alt="Logo Facebook"]{
+       width: 17.7rem;
+   }
+
+    header{
+        padding: 2rem 0 1rem 0;
+
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4d68a1+0,3c5998+100 */
+        background: rgb(77,104,161);
+        background: -moz-linear-gradient(top, rgba(77,104,161,1) 0%, rgba(60,89,152,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(77,104,161,1) 0%,rgba(60,89,152,1) 100%);
+        background: linear-gradient(to bottom, rgba(77,104,161,1) 0%,rgba(60,89,152,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d68a1', endColorstr='#3c5998',GradientType=0 );
+    }
+
+    /* Limiter la largeur maximale de la section du header et la centrer */
+    header section{
+        max-width: 95rem;
+        margin: auto;
+    }
+
+    header section, header form, form ul{
+        /* Définir le container pour les flexboxes */
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    header article {
+        width: 40%;
+    }
+
+    /* Sélectionner la première balise article du header */
+    header article:first-child{
+        width: 60%;
+    }
+
+    header fieldset{
+        width: 42.5%;
+    }
+
+    header fieldset:nth-child(1){
+        margin-bottom: 1.7rem;
+    }
+
+    /* Sélectionner les boutons qui sont placés directement après les balises fieldset */
+    fieldset + button{
+        width: 15%;
+        padding: .5rem;
+    }
+
+    label{
+        font-size: 1.2rem;
+        color: white;
+
+        /* Passer la balise en block pour utiliser margin-bottom */
+        display: block;
+        margin-bottom: .3rem;
+    }
+
+    header input{
+        border: none;
+        border: .1rem solid #1e2b5c;
+        padding: .5rem;
+        width: 90%;
+    }
+
+    header fieldset a{
+        font-size: 1.2rem;
+        color: #9cb4d8;
+    }
+
+    header button{
+        color: white;
+        background: #4267b2;
+        border: none;
+        border: .1rem solid #29487d;
+    }
+/**/
+
+/*
+Main
+*/
+    main{
+        background: #edf0f5;
+        padding: 4rem 0;
+    }
+
+    main div{
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    main section:nth-child(1){
+        -webkit-order: 2;
+        order: 2;
+        width: 40%;
+    }
+
+    main section:last-child{
+        -webkit-order: 1;
+        order: 1;
+        width: 60%;
+    }
+
+    main li {
+        color: #666;
+    }
+
+    main li b {
+        color: #333;
+        margin-right: 1rem;
+    }
+
+    main section:last-child li::before{
+        /* Ajouter une balise dans le DOM */
+        content: '';
+        display: block;
+        width: 4.5rem;
+        height: 4.5rem;
+        background-image: url('../img/see.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        /* Placer à gauche de son parent => la li doit être en position: relative */
+        position: absolute;
+        left: 0;
+    }
+
+    main section:last-child li:nth-child(2)::before{
+        background-image: url('../img/share.png');
+    }
+
+    main section:last-child li:nth-child(3)::before{
+        background-image: url('../img/find.png');
+    }
+
+    main section:last-child li{
+        /* Bloquer le enfants dans le parent */
+        position: relative;
+
+        padding-left: 6rem;
+        margin-bottom: 2.5rem;
+
+        /* Augmenter la hauteur des ligne */
+        line-height: 2.7;
+    }
+/**/
+
+/* 
+Footer
+*/
+    footer, div {
+        max-width: 95rem;
+        margin: auto;
+    }
+
+    footer li {
+        display: inline-block;
+        margin-right: .5rem;
+    }
+/**/

@@ -1,0 +1,82 @@
+/* 
+Reset
+*/
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intéger le padding et la bordure dans la taille des balises */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Configurer les REM */
+    html{
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body{
+        font-size: 1.5rem; /* => 15px */
+    }
+/**/
+
+
+/* 
+Style main
+*/
+    main{
+        max-width: 60rem;
+        padding: 2rem;
+        border: 1rem solid black;
+        margin: 21rem auto;
+        height: 27rem;
+
+        /* 
+            Bloquer les enfants dans le parent 
+            => faire croire aux enfants que <main> est le <body>
+        */
+        position: relative;
+    }
+
+    section{
+        width: 3rem;
+        height: 3rem;
+        background-color: grey;
+
+        /* Sortir la balise du flux pour la positionner */
+        position: absolute;
+    }
+/**/
+
+/* 
+Sélecteurs CSS3
+*/
+    section:first-child{
+        background-color: green;
+
+        bottom: 0;
+        right: 0;
+
+    }
+
+    section:nth-child(2){
+        background-color: yellow;
+
+        bottom: 0;
+        left: 0;
+    }
+
+    section:nth-of-type(3){
+        background-color: red;
+
+        top: 0;
+        right: 0;
+    }
+
+    section:last-child {
+        top: 0;
+        left: 0;
+    }
+/**/

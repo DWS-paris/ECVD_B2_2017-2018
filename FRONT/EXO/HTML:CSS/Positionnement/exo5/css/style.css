@@ -1,0 +1,53 @@
+/* 
+Reset
+*/
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intéger le padding et la bordure dans la taille des balises */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Configurer les REM */
+    html{
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body{
+        font-size: 1.5rem; /* => 15px */
+    }
+
+    ul {
+        list-style: none;
+    }
+/**/
+
+/* 
+Du flex dans la Nav
+*/
+    nav ul {
+        height: 100vh;
+
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        -webkit-justify-content: space-evenly;
+        -ms-justify-content: space-evenly;
+        justify-content: space-evenly;
+
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    nav li:first-child{
+        -webkit-order: 4;
+        -ms-order: 4;
+        order: 4;
+    }
+/*  */

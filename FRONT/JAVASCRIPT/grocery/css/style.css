@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+
+
+/*
+STYLE reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    }
+    
+
+    ul{
+        list-style: none;
+    }
+
+    header, main, footer{
+        max-width: 60rem;
+        margin: auto;
+    }
+
+/*
+STYLE header
+*/
+    header {
+        background-image: url(../img/background.jpg);
+        background-size: 100%;
+        padding: 4rem 2rem;
+        margin: 0 auto 2rem auto;
+        color: white;
+    }
+
+    h1 {
+        background-color: #bf1a07;
+        padding: .5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    h1 + p {
+        border-bottom: .1rem dotted #ffffff;
+        padding-bottom: .5rem;
+        text-shadow: 0 0 0.5rem black;
+    }
+
+
+/*
+STYLE main
+*/
+    main{
+        padding: 0 2rem;
+    }
+
+    h2 {
+        color: #bf1a07;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+
+/*
+STYLE formulaire
+*/
+    fieldset{
+        border: none;
+    }
+
+    fieldset:first-child {
+        border-bottom: .1rem dotted rgba(191, 26, 7, .5);
+        margin-bottom: 1.5rem;
+    }
+
+    legend {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        margin-bottom: .5rem;
+    }
+
+    label, textarea, select, input:not([type="checkbox"]){
+        display: block;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    input:not([type="checkbox"]){
+        border: .1rem solid #ccc;
+        padding: .6rem 1.2rem;
+    }
+
+    input[type="checkbox"]{
+        margin-bottom: .7rem;
+    }
+
+    label {
+        color: #bf1a07;
+        font-weight: 400;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        margin-bottom: .5rem;
+    }
+
+    label b{
+        color: black;
+        text-transform: none;
+    }
+
+    input, textarea{
+        padding: .5rem;
+    }
+
+    input[type="submit"] {
+        background: #bf1a07;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    textarea {
+        max-height: 8rem;
+        height: 8rem;
+        max-width: 100%;
+        border: navajowhite;
+        background-color: #e6e6e6;
+        padding: 1rem;
+    }
+
+    form article {
+        float: left;
+        width: 50%;
+        padding: 0 1rem 0 0;
+        margin-bottom: 1.5rem;
+    }
+
+    form article:last-child{
+        padding: 0 0 0 1rem;
+    }
+
+    select {
+        border: 0;
+        background: white;
+        padding: .6rem 1.2rem;
+        border: .1rem solid #ccc;
+        border-radius: 0;
+        background-image: url(../img/cursorSelect.png);
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: -.2rem;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+
+/*
+STYLE footer
+*/
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    footer p {
+        max-width: 60rem;
+        margin: auto;
+        padding: 1rem;
+        background-color: #bf1a07;
+    }
+
+/*
+STYLE liste de produits
+*/
+    #productList{
+        margin-bottom: 4rem;
+    }
+    
+    #productList img {
+        width: 3rem;
+        float: left;
+        margin-right: 1rem;
+    }
+
+    #productList li {
+        clear: both;
+        border-bottom: .1rem dotted rgba(191, 26, 7, .5);
+        padding-bottom: 1rem;
+        margin: 1.5rem auto;
+    }
+
+    #blackProductList {
+        font-size: 1.1rem;
+        font-style: italic;
+        color: rgba(191, 26, 7, .6);
+    }
+
+
+    #productList p:last-child {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: #bf1a07;
+        font-weight: 400;
+        padding-top: .3rem;
+    }

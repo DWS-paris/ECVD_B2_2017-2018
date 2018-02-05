@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            ul{
+                padding: 0;
+            }
+
+            li{
+                border-bottom: .1rem solid #eee;
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                list-style: none;
+
+                -webkit-transition: color .3s;
+                -moz-transition: color .3s;
+                transition: color .3s;
+            }
+
+            li.isDone{
+                color: #eee;
+            }
+
+            li span{
+                float: right;
+                background-color: #eee;
+                padding: .3rem;
+                color: black;
+            }
+
+            li::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="tasksList">
+        </ul>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

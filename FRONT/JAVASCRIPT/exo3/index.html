@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Capter la soumission d'un formulaire en jQuery</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>Capter la soumission d'un formulaire en jQuery</h1>
+        </header>
+
+        <main>
+            <form action="test.php">
+                <fieldset>
+                    <label for="userTitle">Ajouter un titre <span></span></label>
+                    <input type="text" name="userTitle">
+                </fieldset>
+
+                <fieldset>
+                    <label for="userChoice">Sélectionner une catégorie <span></span></label>
+                    <select name="userChoice">
+                        <option value="null">-Selectionner-</option>
+                        <option value="Pomme">Pomme</option>
+                        <option value="Poire">Poire</option>
+                        <option value="Scoobeedoo">Scoobeedoo</option>
+                    </select>
+                </fieldset>
+                <button type="submit">Valider</button>
+            </form>
+        </main>
+        
+        <!-- Importer jQuery AVANT le script de la page -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

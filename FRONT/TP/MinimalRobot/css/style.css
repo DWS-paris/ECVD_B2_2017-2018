@@ -1,0 +1,465 @@
+/* 
+Style du reset
+*/
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les bordures et les paddings dans la taille des blocs */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body{
+        font-family: 'Times', serif;
+        font-size: 1.5rem; /* => 15px */
+        text-align: center;
+        color: white;
+        background-color: #131313;
+
+        /* Gestion de l'image de fond */
+        background-image: url('../img/background.jpg');
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    h1, h2, h3{
+        font-family: 'Arial', sans-serif;
+    }
+
+    h1, h2{
+        text-transform: uppercase;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    img{
+        max-width: 100%;
+    }
+/**/
+
+/* 
+Style modal
+*/
+    #modal {
+        position: fixed;
+        z-index: 2000;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
+
+        /* Masquer la balise */
+        opacity: 0;
+        left: 100%;
+
+        -webkit-transition: opacity .5s;
+        transition: opacity .5s;
+
+    }
+
+    #modal.open{
+        opacity: 1;
+        left: 0;
+    }
+
+    #modal.open.close{
+        opacity: 0;
+    }
+
+    #contentModal {
+        text-align: left;
+        background-color: white;
+        color: black;
+        position: absolute;
+        width: 70%;
+        padding: 4rem;
+        top: 30%;
+        left: 50%;
+
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        -webkit-transition: top .5s;
+        transition: top .5s;
+    }
+
+    #modal.open #contentModal{
+        top: 50%;
+    }
+
+    #contentModal div{
+        width: 48%;
+        position: relative;
+    }
+
+    #contentModal a {
+        font-size: 3rem;
+        
+        position: absolute;
+        top: -3rem;
+        right: -2.5rem;
+    }
+
+    #contentModal h3{
+        margin-top: 0;
+    }
+/**/
+
+/* 
+Style header
+*/
+    header img{
+        width: 5rem;
+    }
+
+    nav {
+        text-align: left;
+        color: #9c9c9c;
+        padding: 3rem;
+        border-left: .1rem solid #434343;
+        background-color: #131313;
+        height: 100vh;
+        width: 100%;
+
+        /* Figer la nav en haut à droite de la page */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 900;
+
+        -webkit-transition: right .5s;
+        transition: right .5s;
+    }
+
+    /* Ajouter la class open sur la nav au clique sur le burger */
+    nav.open{
+        right: 0;
+    }
+
+    li{
+        margin-bottom: 1rem;
+    }
+
+    nav li:first-child{
+        font-size: 2rem;
+        font-family: 'Arial', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 2rem;
+    }
+
+    nav li:last-child{
+        margin-top: 3rem;
+    }
+
+    header section {
+        max-width: 90rem;
+        margin: auto;
+        height: 100vh;
+
+        /* Bloquer les enfants dans le parent */
+        position: relative;
+    }
+
+    header section a:first-of-type{
+        /* Sortir la balise du flux */
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    header section a:last-of-type {
+        font-size: 3rem;
+        color: #bababa;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1rem 1.5rem;
+        
+        /* Sortir la balise du flux */
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+        font-weight: 900;
+        line-height: 1;
+        width: 100%;
+        max-width: 50rem;
+        padding: 0 1rem;
+
+        /* Sortir la balise du flux pour la repositionner */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        /* CSS3 : utilisation des constructeurs */
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    h1 span {
+        font-family: 'Times', serif;
+        font-weight: 100;
+        font-size: .4em;
+        display: block;
+    }
+/**/
+
+/* 
+Style main
+*/
+    section{
+        padding: 10rem 0;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    main ul{
+        max-width: 35rem;
+        margin: 0 auto 2rem auto;
+    }
+
+    main{
+        max-width: 90rem;
+        margin: auto;
+        padding: 0 1rem;
+    }
+
+    main article{        
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+    figure{
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 3rem;
+
+        /* Bloquer les enfants dans le parent */
+        position: relative;
+    }
+
+    figure img{
+        width: 100%;
+    }
+
+    
+
+    figcaption {
+        font-size: 2rem;
+        background: rgba(19, 19, 19, .5);
+        padding: 2rem;
+        width: 60%;
+
+        opacity: 0;
+        margin-top: -2rem;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    figure:hover figcaption{
+        margin-top: 0;
+        opacity: 1;
+    }
+
+    
+
+    figcaption span {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+        display: block;
+        background: #131313;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+        color: #eea136;
+        margin: 6rem auto 1rem auto;
+    }
+
+    form{
+        max-width: 40rem;
+        margin: auto;
+    }
+
+    input, textarea, button{
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    textarea{
+        min-height: 20rem;
+    }
+
+    .callToAction{
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: #131313;
+        background-color: #eea136;
+        padding: 1rem;
+        
+        border: none;
+        border-bottom: .5rem solid #9d6924;
+
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    .callToAction:hover{
+        background-color: white;
+        border-color: white;
+    }
+/**/
+
+/* 
+Style footer
+*/
+    footer{
+        opacity: .7;
+        padding: 2rem;
+    }
+/**/
+
+
+/* 
+Requêtes media
+*/
+    @media screen and (min-width: 650px){
+        
+        body{
+            background-size: 100%;
+        }
+
+        nav{
+            width: 28rem;
+            right: -28rem;
+            padding: 3.9rem;
+        }
+
+        header section a:first-of-type{
+            top: 2rem;
+            left: 2rem;
+        }
+
+        header section a:last-of-type{
+            top: 2rem;
+            right: 2rem;
+        }
+
+        h1{
+            font-size: 7rem;
+            max-width: 60rem;
+        }
+
+        main{
+            padding: 0 2rem;
+        }
+
+        figure{
+            width: 48%;
+        }
+
+    } /* Fin de la requête 650px */
+
+
+    @media screen and (min-width: 900px){
+         
+        header section{
+            margin-top: -7rem;
+        }
+
+        header section a:last-of-type, nav li:first-child{
+            display: none;
+        }
+
+        nav {
+            position: relative;
+            right: 0;
+            z-index: 1000;
+            height: auto;
+            padding: 0;
+            background-color: transparent;
+            width: 100%;
+            max-width: 90rem;
+            margin: auto;
+            text-align: right;
+            margin-top: 4rem;
+            color: white;
+            font-size: 1.8rem;
+            border: none;
+        }
+
+        nav ul{
+            display: -webkit-flex;
+            display: flex;
+
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+        }
+
+        nav li:last-child{
+            margin-top: 0;
+        }
+
+        nav li{
+            padding-left: 2rem;
+        }
+
+        figure{
+            width: 30%;
+        }
+
+    }
+
+/**/

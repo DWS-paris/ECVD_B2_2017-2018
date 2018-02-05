@@ -1,0 +1,78 @@
+/* 
+Reset
+*/
+*{
+    /* Supprimer toutes les marges */
+    margin: 0;
+    padding: 0;
+
+    /* Intéger le padding et la bordure dans la taille des balises */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Configurer les REM */
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body{
+    font-size: 1.5rem; /* => 15px */
+}
+/**/
+
+/* 
+- Ajouter une bordure noire de 5px tout autour de la nav
+- Ajouter une marge intérieur de 20px sur la nav
+- La nav ne dépasse pas 600px et est centrée dans la page
+*/
+nav, footer, main{
+    border: .5rem solid black;
+    padding: 2rem;
+    max-width: 60rem;
+    margin: 5rem auto;
+    text-align: right;
+
+    /* Modifier la position de nav pour bloquer les enfants à l'intérieur */
+    position: relative;
+}
+
+/* Transformer les balises LI pour mettre les liens de la NAV sur une seule ligne */
+li, main ul{
+    display: inline-block;    
+}
+
+/* Positionner précisément la première baise LI */
+nav li:first-child{
+    position: absolute;
+    left: 2rem;
+}
+
+footer{
+    text-align: left;
+}
+
+footer li:last-child{
+    position: absolute;
+    right: 2rem;
+}
+
+
+/* 
+Main
+*/
+    main{
+        text-align: center;
+    }
+
+    /* Sélectionner la balise a qui est enfant direct de main */
+    main > a{
+        position: absolute;
+        left: 2rem;
+    }
+
+    main > :last-child{
+        position: absolute;
+        right: 2rem;
+    }

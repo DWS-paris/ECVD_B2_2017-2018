@@ -1,0 +1,84 @@
+/* 
+Reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 2.5rem;
+    }
+/**/
+
+header, main{
+    padding: 2rem;
+}
+
+main p{
+    display: inline-block;
+    max-width: 80%;
+    background-color: #333;
+    padding: 1rem;
+}
+
+.user{
+    color: white;
+}
+
+main .bot p{
+    background-color: #eee;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+}
+
+.user{
+    text-align: right;
+}
+
+
+/* 
+Formulaire
+*/  
+    fieldset{
+        border: none;
+    }
+
+    input, button{
+        padding: 1rem;
+    }
+
+    input{
+        width: 85%;
+    }
+
+    button{
+        width: 10%;
+    }
+
+    form p{
+        opacity: 0;
+
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    form p.open{
+        opacity: 1;
+    }
+/**/

@@ -1,0 +1,16 @@
+/* 
+- Ajouter une bordure noire de 5px tout autour de la nav
+- Ajouter une marge intérieur de 20px sur la nav
+- La nav ne dépasse pas 600px et est centrée dans la page
+*/
+nav{
+    border: 5px solid black;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Transformer les balises LI pour mettre les liens de la NAV sur une seule ligne */
+nav li{
+    display: inline-block;
+}

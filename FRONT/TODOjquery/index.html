@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TODO jQuery</title>
+        
+        <!-- Importer les bibliothèques CSS -->
+        <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+        <!-- Improrter le style de la page/site -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>TODO jQuery</h1>
+            <p>Basé sur <a href="http://todomvc.com/">todomvc.com</a></p>
+        </header>
+
+        <main>
+            <form action="task.php" id="myForm">
+                <input type="text" name="newTask" id="myNewTask">
+                <button type="submit">OK <span id="errorMsg">Ajouter un titre</span></button>
+            </form>
+
+            <section id="todoList"></section>
+        </main>
+
+        <!-- Importer jQuery AVANT le script qui l'utilise -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+        <!-- Importer le script de la page -->
+        <script src="./js/script.js"></script>
+    </body>
+</html>

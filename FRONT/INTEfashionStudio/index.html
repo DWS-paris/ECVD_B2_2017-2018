@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Studio Fashion</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        
+        <header>
+            <section>
+                <nav>
+                    <a href="index.html">Fashion Studio</a>
+                    <button class="callToAction" id="burgerBtn"><i class="fas fa-bars"></i></button>
+                    <ul id="mainNav">
+                        <li><a href="#trenchSection">Trench</a></li>
+                        <li><a href="#">Vente privée</a></li>
+                        <li><a href="#">Showroom</a></li>
+                        <li><a href="#">Equipe</a></li>
+                    </ul>
+                </nav>
+
+                <h1>Winter is comming <span>Découvrez notre collection à  <strong>partir de 99€</strong></span></h1>
+
+                <a href="#" class="callToAction">Voir les produits</a>
+            </section>
+        </header>
+
+        <main>
+
+            <section id="trenchSection">
+                <article>
+                    <!-- Figcaption obligatoire pour les figure -->
+                    <figure>
+                        <img src="./img/trench.jpg">
+
+                        <!-- Prend le rôle de alt="" -->
+                        <figcaption>Trench noir 145€</figcaption>
+                    </figure>
+                </article>
+
+                <article class="margeBloc">
+                    <h2>Trench noir</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quis minima distinctio obcaecati provident.</p>
+
+                    <div>
+                        <div id="productPrice">145€</div>
+                        <div id="sizeChoice">
+                            <p>Taille</p>
+                            <ul>
+                                <li><button data-size="xs">XS</button></li>
+                                <li><button data-size="s">S</button></li>
+                                <li><button data-size="m">M</button></li>
+                                <li><button data-size="l">L</button></li>
+                                <li><button data-size="xl">XL</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button id="validatedSize">Commander</button>
+
+                </article>
+            </section>
+
+            <section id="privateSale">
+                <article class="margeBloc">
+
+                    <form action="">
+                        <input type="text" name="userName">
+                        <input type="email" name="userEmail">
+
+                        <label for="userSize">Indiquez nous votre taille</label>
+                        <select name="">
+                            <option value="null" selected >- Sélectionner -</option>
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+
+                        <label for="userMessage">Ajouter un message</label>
+                        <textarea name="userMessage"></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+
+                </article>
+
+                <article>
+                    <img src="./img/photoForm.jpg" alt="Photo de présentation">
+                </article>
+            </section>
+
+            <section id="showroom">
+                <figure>
+                    <img src="./img/showroom.jpg">
+                    <figcaption>
+                        <a href="#"><i class="fas fa-play"></i> Visitez notre showroom</a>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section id="team" class="margeBloc">
+                <h2>Une équipe à votre service <span>Nous sommes une équipe de passionnées de mode</span></h2>
+
+                <ul>
+                    <li>
+                        <img src="./img/lauraLameuf.jpg" alt="Photo de Laura">
+                        <h3>Laura Lameuf</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    </li>
+
+                    <li>
+                        <img src="./img/claraRakliy.jpg" alt="Photo de Clara">
+                        <h3>Clara Rakliy</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    </li>
+
+                    <li>
+                        <img src="./img/sylvieGirlky.jpg" alt="Photo de Sylvie">
+                        <h3>Sylvie Girly</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+    
+        <footer class="margeBloc">
+            <h2>Fashion Studio</h2>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </footer>
+
+        <!-- Intégrer les script juste avant la fin body -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

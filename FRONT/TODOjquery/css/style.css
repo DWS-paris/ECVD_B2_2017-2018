@@ -1,0 +1,21 @@
+button {
+    line-height: 1;
+}
+
+#errorMsg {
+    width: 0;
+    display: inline-block;
+    overflow: hidden;
+
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    transition: width .3s;
+}
+
+#errorMsg.open {
+    width: 125px;
+}
+
+.taskIsDone{
+    text-decoration: line-through;
+}

@@ -1,0 +1,96 @@
+/* 
+Style Reset
+*/
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300,700');
+
+    *{
+        /* Supprimer les marges des balises */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer le borders et les paddings dans la largeur des blocs */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Définir la taille initiale de 1rem */
+    html{
+        font-size: 62.5%; /* => 10px */
+    }
+
+    body{
+        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    /* Faire en sorte que les images ne dépassent pas leur parent */
+    img {
+        max-width: 100%;
+    }
+
+    fieldset {
+        border: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    h1, h2, h3, nav a{
+        font-family: 'Roboto Slab', serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: 5rem;
+        line-height: 1;
+        color: #e46c62;
+    }
+
+    h1 span {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: .5em;
+        color: black;
+        display: block;
+        margin: 2rem auto;
+    }
+/**/
+
+/* 
+Style header
+*/
+    header{
+        /* La hauteur du header est égale à la hauteur de la page */
+        height: 100vh;
+
+        /* Image de fond */
+        background-image: url('../img/bckHeader.png');
+        background-color: #e9eaec;
+        background-repeat: no-repeat;
+        background-size: 25rem;
+        background-position: bottom left;
+    }
+
+    nav{
+        color: black;
+        padding: 2rem 0;
+    }
+
+    /* Sélectionner la balise a qui suit la balise h1 */
+    h1 + a {
+        border: 3px solid #e46c62;
+        font-weight: 700;
+        padding: .5rem;
+    }
+
+    header section{
+        margin-top: 2rem;
+    }
+/**/

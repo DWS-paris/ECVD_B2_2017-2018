@@ -1,0 +1,14 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "babel --no-babelrc typings -w -d js --presets=env"
+  },
+  "author": "Julien Noyer",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}

@@ -1,0 +1,88 @@
+/* 
+Reset
+*/
+*{
+    /* Supprimer toutes les marges */
+    margin: 0;
+    padding: 0;
+
+    /* Intéger le padding et la bordure dans la taille des balises */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Configurer les REM */
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body{
+    font-size: 1.5rem; /* => 15px */
+}
+header, main, footer{
+    padding: 4rem;
+}
+/**/
+
+/* 
+Style header
+*/
+    header{
+        background-color: darkred;
+
+        /* Figer la balise */
+        position: fixed;
+
+        /* Définir la taille */
+        height: 100vh;
+
+        /* Posiotnner la balise */
+        left: 0;
+        top: 0;
+
+        /* Gérer l'ordre des balise (comme des calque PS) */
+        z-index: 1000;
+    }
+/**/
+
+/* 
+Style main
+*/
+/**/
+    main{
+        background-color: cyan;
+        /* Figer la balise */
+        position: fixed;
+
+        /* Positionner la balise */
+        left: 13rem;
+        top: 0;
+
+        /* Définir la taille */
+        height: 100vh;
+
+        /* Si le contenu dépasse du bloque il faut gérer le défilement */
+        overflow: auto;
+
+        padding-bottom: 12rem;
+    }
+/* 
+Style footer
+*/
+    footer{
+        background-color: green;
+
+        /* Figer la balise */
+        position: fixed;
+
+        /* Définir la largeur */
+        width: 100%;
+
+        /* Positionner la balise en x en y */
+        bottom: 0;
+        left: 0;
+
+        padding-left: 16rem;
+    }
+/**/

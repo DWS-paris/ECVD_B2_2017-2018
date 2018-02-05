@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Ma liste de course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ma liste de course</h1>
+        <p>Système de gestion pour acheter mieux.</p>
+    </header>
+
+    <main>
+        
+        <section>
+            <h2>Ma liste de course</h2>
+            <ul id="productList">
+                <li id="blackProductList">
+                    Ajouter un produit...
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Ajouter un produit</h2>
+            <form>
+
+                <fieldset>
+                    <legend>Type de produit</legend>
+                    <article>
+                        <label for="productType">Catégorie <span></span></label>
+                        <select id="productType">
+                            <option value="null" selected>Sélectionner</option>
+                            <option value="legume">Légume</option>
+                            <option value="fruit">Fruit</option>
+                            <option value="viande">Viande</option>
+                            <option value="poisson">Poisson</option>
+                            <option value="divers">Divers</option>
+                        </select>
+                    </article>
+
+                    <article>
+                        <label for="productName">Nom <span></span></label>
+                        <input type="text" id="productName" placeholder="Obligatoire">
+                    </article>
+                </fieldset>
+
+                <fieldset>
+                    <legend>A propos</legend>
+                    <article>
+                        <label for="productComment">Commentaire <span></span></label>
+                        <textarea id="productComment" placeholder="quantité, format..."></textarea>
+                    </article>
+                    <article>
+                        <label for="productOption">Option <span></span></label>
+                        <ul id="productOption">
+                            <li><input type="checkbox" value="petitDej" name="productOption"> Petit déjeuné</li>
+                            <li><input type="checkbox" value="dejeune" name="productOption"> Déjeuné</li>
+                            <li><input type="checkbox" value="diner" name="productOption"> Diner</li>
+                            <li><input type="checkbox" value="reserve" name="productOption"> Reserve</li>
+                        </ul>
+                    </article>
+                </fieldset>
+
+                <input type="submit" value="Ajouter">
+
+            </form>
+        </section>
+
+        
+
+    </main>
+
+    <footer>
+        <p>Under MIT Licence</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
