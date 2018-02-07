@@ -14,22 +14,24 @@ Boutons Home : En savoir plus / Télécharger
 <hr/>
 
 ### FEATURES
-Titre : Les avantages de ToDoes<br>
-Sous-titre : Plus qu’une simple application, TodDoes est votre assistant de poche.
+
 
 Facile<br>
-Une prise en main rapide pour ajouter, supprimer ou organiser vos tâches
+Une prise en main rapide pour ajouter, supprimer ou organiser vos tâches<br>
 
 Sécurisé<br>
-Vos données sont stoker sur un serveur protéger pour assurer votre vie privée
+Vos données sont stoker sur un serveur protéger pour assurer votre vie privée<br>
 
 Connecter<br>
-Partager vos tâches ou réaliser les à plusieurs en gérant une équipe
+Partager vos tâches ou réaliser les à plusieurs en gérant une équipe<br>
 
 Gratuit<br>
-En plus d'être rapide et efface, notre application est 100% gratuite*
+En plus d'être rapide et efface, notre application est 100% gratuite*<br>
 
-APP<br>
+### APP
+Titre : Les avantages de ToDoes<br>
+Sous-titre : Plus qu’une simple application, TodDoes est votre assistant de poche.<br>
+
 Personnalisation<br>
 ToDoes est 100% configurable
 
